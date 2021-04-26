@@ -8,7 +8,6 @@
 <details>
 <summary>展开查看</summary>
 <pre><code>.
-.
 ├── Golang
 │   ├── slice.go
 │   ├── src
@@ -19,5 +18,7 @@
 │   └── String.java
 ├── README.md
 └── Shell
+    └── date.sh
+4 directories, 7 files
 </code></pre>
 </details>
