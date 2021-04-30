@@ -24,7 +24,18 @@ echo $month
 day=$(date +%d)
 echo $day
 
-# 参数 '%d' 一个月的第几天 / parameter '%d' what a day of month
-# output: 21
-day=$(date +%d)
-echo $day
+# 参数 '%D' mmddyy格式日期 / parameter '%D' yymmdd format date
+# output: 04/26/21
+mmddyy=$(date +%D)
+echo $mmddyy
+
+# 参数 '%H' 24格式 / parameter '%H' 24 hour format
+# output: 15
+hour24=$(date +%H)
+echo $hour24
+
+
+# 参数 '%I' 12小时格式 / parameter '%I' 12 hour format
+# output: 03
+hour12=$(date +%I)
+echo $hour12
