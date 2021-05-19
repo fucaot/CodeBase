@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 )
@@ -28,4 +27,17 @@ func main() {
 	// 打印出所有输入参数
 	fmt.Println("commands: ", s)
 	fmt.Println("os.Args[0] name: ", os.Args[0])
+	// 接收输入并输出
+	Stdin()
+}
+
+// you can use Stdin function receive keybord input for real time
+// 你可以通过Stdin函数来实时接收键盘的输入
+func Stdin() {
+	var b [512]byte
+	fmt.Println(os.Stdin)
+	n, err := os.Stdin.Read(b[:])
+	if err == nil {
+		fmt.Println(n, " ", string(b[:]))
+	}
 }
