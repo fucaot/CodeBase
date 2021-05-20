@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 // the os package can help you get the input external input, by the 'os.Args' it's a string slice,
