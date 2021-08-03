@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func TestGet(t *testing.T) {
+func Test_Get(t *testing.T) {
 	url := "www.github.com"
 	// 通过url 进行httpGet请求
 	resp, err := http.Get(url)
@@ -28,7 +28,7 @@ func TestGet(t *testing.T) {
 	fmt.Println(string(status[:]))
 }
 
-func TestHandle(t *testing.T) {
+func Test_Handle(t *testing.T) {
 	// http.Handle方法结构, 此方法默认使用DefaultMux, 因此定义Handler为nil的server对象均可使用
 	// func Handle(pattern string, handler handler)
 	server := http.Server{

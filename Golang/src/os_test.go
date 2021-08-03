@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	"strings"
+	"testing"
 )
 
 // the os package can help you get the input external input, by the 'os.Args' it's a string slice,
@@ -17,7 +17,7 @@ import (
 // command:  os2
 // commands:  os os1 os2
 // os.Args[0] name:  /var/folders/s3/3lw7rn712ls2m3zt3smkzrn40000gn/T/go-build1584056910/b001/exe/os
-func main() {
+func Test_Args(t *testing.T) {
 	var s, sep string
 	for i := 1; i < len(os.Args); i++ {
 		s += sep + os.Args[i]
@@ -29,14 +29,14 @@ func main() {
 	fmt.Println("commands: ", s)
 	fmt.Println("os.Args[0] name: ", os.Args[0])
 	// 接收输入并输出
-	Stdin()
+	// Stdin()
 }
 
 // you can use Stdin function receive keybord input for real time
 // 你可以通过Stdin函数来实时接收键盘的输入
-func Stdin() {
+func Test_Stdin(t *testing.T) {
 	var b [512]byte
-	fmt.Println(os.Stdin)
+	// fmt.Println(os.Stdin)
 	n, err := os.Stdin.Read(b[:])
 	if err == nil {
 		fmt.Println(n, " ", string(b[:]))

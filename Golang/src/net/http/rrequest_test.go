@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestParseForm(t *testing.T) {
+func Test_ParseForm(t *testing.T) {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// 返回Form表单中指定key的slice
 		// 先通过ParseForm解析, 然后访问表单字段
@@ -16,7 +16,7 @@ func TestParseForm(t *testing.T) {
 	})
 }
 
-func TestFormValue(t *testing.T) {
+func Test_FormValue(t *testing.T) {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// FormValue 返回Form表单中指定key字段的第一个value
 		name := r.FormValue("name")
@@ -27,7 +27,7 @@ func TestFormValue(t *testing.T) {
 	})
 }
 
-func TestParseMultipartForm(t *testing.T) {
+func Test_ParseMultipartForm(t *testing.T) {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// multpart/form-data最常见的应用场景就是上传文件
 		// 调用ParseMultpartForm进行解析, 参数, 一次访问的子节长度
@@ -49,7 +49,7 @@ func TestParseMultipartForm(t *testing.T) {
 	})
 }
 
-func TestMultipartReader(t *testing.T) {
+func Test_MultipartReader(t *testing.T) {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		// 如果是multipart/form-data 或 mutipart混合的请求，则返回multipart.Reader, 否则返回nil
 		// 此函数用于代替MutipartForm 将请求作为stream进行处理

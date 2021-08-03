@@ -4,9 +4,10 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"testing"
 )
 
-func main() {
+func Test_NewScanner(t *testing.T) {
 	counts := make(map[string]int)
 	// 获取一个io对象
 	input := bufio.NewScanner(os.Stdin)
